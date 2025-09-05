@@ -1,0 +1,22 @@
+[package]
+name = "thinkeloquent-tools-chunking-directory-mapping-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Core library for directory scanning and file classification"
+exclude = ["Cargo.lock"]
+
+[dependencies]
+walkdir.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+quickcheck = "1.0"
+quickcheck_macros = "1.0"
+proptest = "1.4"
+tempfile = "3.8"
+assert_matches = "1.5"

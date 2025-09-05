@@ -1,0 +1,32 @@
+[package]
+name = "directory-scanner-wasm"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "WebAssembly bindings for the directory scanner SDK"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+thinkeloquent-tools-chunking-directory-mapping-core = { path = "../core", version = "0.1.1" }
+wasm-bindgen.workspace = true
+serde-wasm-bindgen.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+thiserror.workspace = true
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+  "console",
+]
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ["-Oz", "--enable-mutable-globals"]
+
+[package.metadata.wasm-pack.profile.dev]
+wasm-opt = false

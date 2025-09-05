@@ -1,0 +1,20 @@
+[package]
+name = "thinkeloquent-tools-chunking-directory-mapping"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Command-line interface for the directory scanner SDK"
+
+[[bin]]
+name = "projscan"
+path = "src/main.rs"
+
+[dependencies]
+thinkeloquent-tools-chunking-directory-mapping-core = { path = "../core", version = "0.1.1" }
+clap.workspace = true
+indicatif.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+thiserror.workspace = true

@@ -1,0 +1,11 @@
+{
+  "name": "tools-chunking-directory-mapping",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "crates/wasm/pkg"
+  ],
+  "scripts": {
+    "publish": "npm publish --workspace=crates/wasm/pkg --access=public"
+  }
+}
